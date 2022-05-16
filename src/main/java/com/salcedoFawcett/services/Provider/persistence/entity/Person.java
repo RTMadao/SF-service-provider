@@ -20,6 +20,9 @@ public class Person {
     private Address address;
     private String addressZoneType;
 
+    public Person() {
+    }
+
     public Person(String registration_name, PartyIdentification party_identification, String sex, Date birthday, Address address, String addressZoneType) {
         this.registration_name = registration_name;
         this.party_identification = party_identification;

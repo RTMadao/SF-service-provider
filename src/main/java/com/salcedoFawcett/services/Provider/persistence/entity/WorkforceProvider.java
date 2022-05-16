@@ -21,6 +21,7 @@ public class WorkforceProvider {
     @OneToMany(mappedBy="provider", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Affiliation> affiliations;
 
+    public WorkforceProvider(){}
     public WorkforceProvider(String workPosition, Person personalInfo, Provider provider, Set<ProviderWorkforceFamily> family, Set<Affiliation> affiliations) {
         this.workPosition = workPosition;
         this.personalInfo = personalInfo;

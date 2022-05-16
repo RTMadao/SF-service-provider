@@ -16,9 +16,18 @@ public class ProviderWorkforceFamily {
     private Person familyMember;
     private String relationship;
 
+    public ProviderWorkforceFamily(){}
     public ProviderWorkforceFamily(Person familyMember, String relationship) {
         this.familyMember = familyMember;
         this.relationship = relationship;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public WorkforceProvider getProvider() {

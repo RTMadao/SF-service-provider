@@ -16,7 +16,6 @@ public class Affiliation {
     private WorkforceProvider provider;
 
     public Affiliation(){}
-
     public Affiliation(String type, String company, int affiliationType) {
         this.type = type;
         this.company = company;

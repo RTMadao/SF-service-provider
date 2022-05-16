@@ -38,7 +38,7 @@ class ProviderApplicationTests {
 		affiliations.add(new Affiliation("EPS","Positiva",2));
 
 		WorkforceProvider provider = new WorkforceProvider("Obnrero",providerInfo,providerData,providerWorkforceFamilies,affiliations);
-		repository.save(provider.addProviderWorkforceFamily().addAffiliations());
+		//repository.save(provider.addProviderWorkforceFamily().addAffiliations());
 	}
 
 	//@Test

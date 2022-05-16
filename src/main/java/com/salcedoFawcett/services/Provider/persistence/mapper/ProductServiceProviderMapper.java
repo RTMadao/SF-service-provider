@@ -2,7 +2,6 @@ package com.salcedoFawcett.services.Provider.persistence.mapper;
 
 import com.salcedoFawcett.services.Provider.domain.model.Provider;
 import com.salcedoFawcett.services.Provider.persistence.entity.ProductServiceProvider;
-import com.salcedoFawcett.services.Provider.persistence.entity.ProviderPaymentMeans;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
