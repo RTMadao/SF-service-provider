@@ -8,13 +8,13 @@ public class PartyIdentification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private double partyIdentificationId;
+    private long partyIdentificationId;
     private int partyIdentificationSchemeId;
     private int partyIdentificationSchemeName;
 
     public PartyIdentification() {}
 
-    public PartyIdentification(double partyIdentificationId, int partyIdentificationSchemeId, int partyIdentificationSchemeName) {
+    public PartyIdentification(long partyIdentificationId, int partyIdentificationSchemeId, int partyIdentificationSchemeName) {
         this.partyIdentificationId = partyIdentificationId;
         this.partyIdentificationSchemeId = partyIdentificationSchemeId;
         this.partyIdentificationSchemeName = partyIdentificationSchemeName;
@@ -28,11 +28,11 @@ public class PartyIdentification {
         this.id = id;
     }
 
-    public double getPartyIdentificationId() {
+    public long getPartyIdentificationId() {
         return partyIdentificationId;
     }
 
-    public void setPartyIdentificationId(double partyIdentificationId) {
+    public void setPartyIdentificationId(long partyIdentificationId) {
         this.partyIdentificationId = partyIdentificationId;
     }
 

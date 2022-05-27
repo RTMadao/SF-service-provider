@@ -33,9 +33,21 @@ public class ProviderController {
     public ResponseEntity<List<WorkForceProvider>> getAllWorkforceProvider(){
         return new ResponseEntity<>(WPService.getAll(), HttpStatus.OK);
     }
-    @GetMapping("/get_by_id/{id}")
-    public ResponseEntity<Provider> getById(@PathVariable("id") int id){
-        return service.getById(id)
+    @GetMapping("/materials/get_by_partyIdentification/{id}")
+    public ResponseEntity<Provider> getMaterialProviderByPartyIdentificationId(@PathVariable("id") long id){
+        return service.getByPartyIdentificationId(id)
+                .map( item -> new ResponseEntity<>(item, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+    @GetMapping("/services/get_by_partyIdentification/{id}")
+    public ResponseEntity<Provider> getServiceProviderByIdPartyIdentificationId(@PathVariable("id") long id){
+        return service.getByPartyIdentificationId(id)
+                .map( item -> new ResponseEntity<>(item, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+    @GetMapping("/workforce/get_by_partyIdentification/{id}")
+    public ResponseEntity<WorkForceProvider> getByPartyIdentificationId(@PathVariable("id") long id){
+        return WPService.getByPartyIdentificationId(id)
                 .map( item -> new ResponseEntity<>(item, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }

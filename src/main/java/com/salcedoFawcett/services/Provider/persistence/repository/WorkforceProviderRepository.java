@@ -29,6 +29,12 @@ public class WorkforceProviderRepository implements com.salcedoFawcett.services.
     }
 
     @Override
+    public Optional<WorkForceProvider> getByPartyIdentificationId(long partyIdentificationId) {
+        System.out.println(partyIdentificationId);
+        return crudRepository.findByPersonalInfoPartyIdentificationPartyIdentificationId(partyIdentificationId).map(mapper::toProvider);
+    }
+
+    @Override
     public WorkForceProvider save(WorkForceProvider provider) {
         WorkforceProvider workforceProvider = mapper.toWorkforceProvider(provider);
         workforceProvider.setProvider(workforceProvider.getProvider().addPaymentMeans());

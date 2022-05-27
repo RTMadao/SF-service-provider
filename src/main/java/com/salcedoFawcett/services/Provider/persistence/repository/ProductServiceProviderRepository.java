@@ -29,6 +29,10 @@ public class ProductServiceProviderRepository implements ProviderRepository {
         return crudRepository.findById(providerId).map(mapper::toProvider);
     }
 
+    public Optional<Provider> getByPartyIdentificationId(long partyIdentificationId) {
+        return crudRepository.findByPartyIdentificationPartyIdentificationId(partyIdentificationId).map(mapper::toProvider);
+    }
+
     @Override
     public Provider save(Provider provider) {
         ProductServiceProvider productServiceProvider = mapper.toProductServiceProvider(provider);

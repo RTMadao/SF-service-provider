@@ -12,7 +12,7 @@ public class Person {
     private String registration_name;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "party_identification_id", referencedColumnName = "id")
-    private PartyIdentification party_identification;
+    private PartyIdentification partyIdentification;
     private String sex;
     private Date birthday;
     @OneToOne(cascade = CascadeType.ALL)
@@ -25,7 +25,7 @@ public class Person {
 
     public Person(String registration_name, PartyIdentification party_identification, String sex, Date birthday, Address address, String addressZoneType) {
         this.registration_name = registration_name;
-        this.party_identification = party_identification;
+        this.partyIdentification = party_identification;
         this.sex = sex;
         this.birthday = birthday;
         this.address = address;
@@ -49,11 +49,11 @@ public class Person {
     }
 
     public PartyIdentification getParty_identification() {
-        return party_identification;
+        return partyIdentification;
     }
 
     public void setParty_identification(PartyIdentification party_identification) {
-        this.party_identification = party_identification;
+        this.partyIdentification = party_identification;
     }
 
     public String getSex() {

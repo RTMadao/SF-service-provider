@@ -20,6 +20,9 @@ public class ProviderService {
     public Optional<Provider> getById(int providerId){
         return repository.getById(providerId);
     }
+    public Optional<Provider> getByPartyIdentificationId(long partyIdentificationId){
+        return repository.getByPartyIdentificationId(partyIdentificationId);
+    }
     public Provider save(Provider provider){
         return repository.save(provider);
     }

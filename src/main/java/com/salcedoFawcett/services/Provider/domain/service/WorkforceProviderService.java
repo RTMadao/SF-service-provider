@@ -1,5 +1,6 @@
 package com.salcedoFawcett.services.Provider.domain.service;
 
+import com.salcedoFawcett.services.Provider.domain.model.Provider;
 import com.salcedoFawcett.services.Provider.domain.model.WorkForceProvider;
 import com.salcedoFawcett.services.Provider.domain.repository.WorkforceProviderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class WorkforceProviderService {
 
     public Optional<WorkForceProvider> getById(int providerId){
         return repository.getById(providerId);
+    }
+    public Optional<WorkForceProvider> getByPartyIdentificationId(long partyIdentificationId){
+        return repository.getByPartyIdentificationId(partyIdentificationId);
     }
     public WorkForceProvider save(WorkForceProvider provider){
         return repository.save(provider);
